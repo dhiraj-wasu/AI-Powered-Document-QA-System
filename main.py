@@ -12,7 +12,7 @@ for i in range(max_retries):
         print(f"⏳ Attempt {i+1}/{max_retries}: Waiting for database... Error: {e}")
         time.sleep(3)
 else:
-    raise Exception("❌ Database connection failed after multiple retries.")
+    raise Exception(" Database connection failed after multiple retries.")
 
 # Reset DB schema
 db.drop_tables([DocumentInformationChunks, DocumentTags, Documents, Tags], safe=True)
